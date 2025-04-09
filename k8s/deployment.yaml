@@ -15,17 +15,17 @@ spec:
         app: k8s-api-sample
     spec:
       imagePullSecrets:
-      - name: regcred
+        - name: regcred
       containers:
-      - name: k8s-api-sample
-        image: 503561449641.dkr.ecr.ap-northeast-1.amazonaws.com/k8s-api-sample:latest
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 3000
-        resources:
-          requests:
-            cpu: "100m"
-            memory: "128Mi"
-          limits:
-            cpu: "200m"
-            memory: "256Mi" 
+        - name: k8s-api-sample
+          image: 503561449641.dkr.ecr.ap-northeast-1.amazonaws.com/k8s-api-sample:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "200m"
+              memory: "256Mi"
