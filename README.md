@@ -130,7 +130,7 @@ curl http://<EC2のパブリックIP>/
 # => {"message":"Hello World!"}
 
 # Pod のログ確認例
-kubectl logs -l app=express-api
+kubectl logs -l app=k8s-api-sample
 # => "Express server is running ..."
 ```
 
