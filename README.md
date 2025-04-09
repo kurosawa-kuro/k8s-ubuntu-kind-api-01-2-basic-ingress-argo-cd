@@ -122,7 +122,7 @@ kubectl apply -f k8s/ingress.yaml
 
 ```bash
 # ローカル（EC2 インスタンス内）からの場合
-curl http://localhost/
+curl http://localhost/posts
 
 # 別のPCからEC2のパブリックIP経由でアクセスするなら
 curl http://<EC2のパブリックIP>/
