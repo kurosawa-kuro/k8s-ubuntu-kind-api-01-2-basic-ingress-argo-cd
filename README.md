@@ -150,6 +150,8 @@ kubectl wait --namespace argocd \
   --for=condition=Ready pod \
   --selector=app.kubernetes.io/name=argocd-server \
   --timeout=180s
+
+kubectl get pods -n argocd
 ```
 
 ---
@@ -233,7 +235,7 @@ argocd app sync express-api
 
 ```bash
 # 再度Inrgess経由で確認
-curl http://<EC2のパブリックIP>/
+curl http://52.195.187.141/posts
 # => {"message":"Hello World!"}
 
 # Argo CD UI でアプリの状態が「Synced」「Healthy」ならOK
